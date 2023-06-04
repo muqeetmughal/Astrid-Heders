@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<title>Astrid&Hedera</title>
+		<meta
+			name="keywords"
+			content="Blockchain, Ethereum, AI, Gas Fees, Gas Price, Gas Price Prediction, Gas Price Saving, Gas Price Optimization, Astrid, Astrid Network, ChainGate, FetchAi"
+		/>
+		<meta
+			name="description"
+			content="ChainGate is a service that can predict the price of gas up to 12 hours in advance and execute your transaction when demand is lower and gas is cheaper."
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+			integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://npmcdn.com/flatpickr/dist/themes/dark.css"
+		/>
+		<link rel="stylesheet" href="/files/styles/global.css" />
+		<link rel="stylesheet" href="/files/styles/style.css" />
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="logo">
+				<img src="/files/images/logo.svg" alt="Logo" />
+			</div>
+
+			<div class="hamburger" id="hamburger">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+		</div>
+		<div class="sidebar-container" id="side-bar-container">
+			<div class="close" id="close">
+				<i class="fa-solid fa-chevron-left"></i>
+			</div>
+			<div class="logo">
+				<img src="/files/images/logo.svg" alt="Logo" />
+			</div>
+			<ul>
+				<li>
+					<a
+						href="https://tome.app/gasfee-predictor/predicting-ethereum-gas-prices-with-a-neural-network-model-clgckzsye0j1vd241j7bc5329"
+						target="_blank"
+						>Documentation</a
+					>
+				</li>
+
+				<li>
+					<a href="https://twitter.com/astrid_net" target="_blank"
+						>Twitter</a
+					>
+				</li>
+				<li>
+					<a href="https://www.astrid.network/" target="_blank"
+						>Website</a
+					>
+				</li>
+			</ul>
+		</div>
+		<div class="main-container-bg">
+			<div class="main-container">
+				<div
+					class="request-form-container"
+					id="request-form-container"
+				>
+					<div class="heading">
+						<h1>A Quick introduction to Astrid approach to Hedera.</h1>
+					</div>
+
+					<div class="request-form">
+						<h3> <br><br>Fetch account balance <br> </h3>
+						<p>Insert any Hedera Account ID and retreive its HBAR token balance.</p>
+
+						<form
+							action="{{ url_for('getAccBal') }}"
+							method="POST"
+							id="form-request"
+						>
+							<div class="div form-element">
+								<input
+									type="text"
+									name="wallet_id"
+									placeholder="Insert Hedera Account ID"
+									class="txn-hash-input"
+									id="txn-hash"
+								/>
+								<input
+									type="submit"
+									value="Fetch Balance"
+									class="confirm-btn"
+									id="confirm-btn"
+									enabled
+								/>
+							</div>
+						</form>
+						<h3> <br><br>Get File Content <br> </h3>
+						<p>Insert any string, store the file on the chain and retreive its content and transaction.</p>
+
+						<form
+							action="{{ url_for('createFile') }}"
+							method="POST"
+							id="form-request"
+						>
+							<div class="div form-element">
+								<input
+									type="text"
+									name="f_content"
+									placeholder="Insert FileID"
+									class="txn-hash-input"
+									id="txn-hash"
+								/>
+								<input
+									type="submit"
+									value="Create File"
+									class="confirm-btn"
+									id="confirm-btn"
+									enabled
+								/>
+
+							</div>
+						</form>
+
+						<h3> <br><br>Generate new wallet <br> </h3>
+						<p>Click the button below and create a new wallet address.</p>
+							<a href="http://localhost:8000/generateAccount"><input
+								type="submit"
+								value="Generate new wallet"
+								class="confirm-btn"
+								id="confirm-btn"
+								enabled
+							/></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="footerSection">
+				<div class="headerButton">
+					<img src="/files/images/logo-footer.png" alt="" />
+				</div>
+				<p style="font-size: 13px">
+					Shape future of blockchain with data. <br><br> Via Gorizia 8, Massafra, 74016, TA, Italy.<br> <a href='http://copyright.it/copyright/copyright-certificato-di-deposito.html?numdepot=DEP638212461706089543' text-decoration='underline'>Astrid Network ® is a trademark registered by Hirundo Technologies.</a> All rights are reserved.
+				</p>
+			</div>
+			<div class="footerSection">
+				<p style="font-size: 13px">
+					<span style="font-size: 18px">Contacts</span> <br />
+					<br />
+					<a href="https://www.astrid.network/contactus.html"
+						>Contact us</a
+					>
+					<br />
+					<a href="https://twitter.com/astrid_net">Twitter</a> <br />
+					<a href="https://t.me/gicappaemme">Telegram</a> <br />
+					<a href="https://discord.com/users/809888220182741022"
+						>Discord</a
+					>
+				</p>
+			</div>
+			<div class="footerSection">
+			</div>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script src="/files/js/index.js"></script>
+		<script src="/files/js/global.js"></script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+.form-submission-status {
+  max-width: 800px;
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.form-submission-status .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.form-submission-status .back-btn {
+  width: 100%;
+  background-color: #ff03ed;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  margin-top: 80px;
+}

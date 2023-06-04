@@ -1,0 +1,14 @@
+
+{
+    "network": {
+        "0.0.3": "0.testnet.hedera.com:50211",
+        "0.0.4": "1.testnet.hedera.com:50211",
+        "0.0.5": "2.testnet.hedera.com:50211",
+        "0.0.6": "3.testnet.hedera.com:50211"
+    },
+    "operator": {
+        "accountId": "0.0.13752044",
+        "privateKey": "302e020100300506032b657004220420aa2f73270c906f5a4ffafd8c42261b7b7fcfdb83d15bdcbacbad3bd140039302"
+    },
+    "mirrorNetwork": "mainnet"
+}
