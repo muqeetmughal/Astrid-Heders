@@ -89,4 +89,4 @@ def createFile():
     return render_template('responseFileContent.html', tx_id=tx_id, fileContent=fileContent)
     
 if __name__ == "__main__":
-  app.run(host="localhost", port=8000, debug=True)
+  app.run(host="0.0.0.0", port=5000, debug=True)
