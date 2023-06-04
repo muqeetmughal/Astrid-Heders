@@ -6,3 +6,9 @@ services:
     build: "."
     ports:
       - "8081:5000"
+    networks:
+      - proxynetwork
+
+networks:
+  proxynetwork:
+    external: true
