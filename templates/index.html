@@ -85,7 +85,7 @@
 
 					<div class="request-form">
 						<h3> <br><br>Fetch account balance <br> </h3>
-						<p>Insert any Hedera Account ID and retreive its HBAR token balance.</p>
+						<p>With this function we are able to retreive the amount of tokens held by a given account on Hedera testnet. Once set up the account on testnet with the simplified process of Hedera Portal, we have the gateway for the chain. Given the operator keys, we are able to connect to the chain through Hedera SDK, take the Account ID as input of the form, and use it to call the 'account balance query' function. The output shows the amount of HBAR tokens held.</p>
 
 						<form
 							action="{{ url_for('getAccBal') }}"
@@ -109,8 +109,8 @@
 								/>
 							</div>
 						</form>
-						<h3> <br><br>Get File Content <br> </h3>
-						<p>Insert any string, store the file on the chain and retreive its content and transaction.</p>
+						<h3> <br><br>Store a file into Hedera Blockchain<br> </h3>
+						<p>This function uses Hedera SDK to create and store a new file (a string) into Hedera Testnet. Once we setup the Operator Keys, we are able to execute a specific transaction to store data called 'File Create Transaction'. Insert the text you want to save on testnet above, and then let's enjoy the transaction ID and the File content stored.</p>
 
 						<form
 							action="{{ url_for('createFile') }}"
@@ -121,7 +121,7 @@
 								<input
 									type="text"
 									name="f_content"
-									placeholder="Insert FileID"
+									placeholder="Insert text you want to store on Hedera Testnet"
 									class="txn-hash-input"
 									id="txn-hash"
 								/>
@@ -136,8 +136,9 @@
 							</div>
 						</form>
 
-						<h3> <br><br>Generate new wallet <br> </h3>
-						<p>Click the button below and create a new wallet address.</p>
+						<h3> <br><br>Generate new account<br> </h3>
+						<p>Hedera SDK have a great options to create new wallets in a safe manner. There are native package functions that are able to safely generate private and public keys, and then specific transactions that are able to safely and fastly create a new account on testnet. Clck the button below and let's find out how it fast and easy is.
+							In the last button replace 'Generate new wallet' with 'Generate new account'</p>
 							<a href="/generateAccount"><input
 								type="submit"
 								value="Generate new wallet"
